@@ -87,3 +87,30 @@ public class kthmaxmin {
 	}
 
 }
+
+// one More easy way to solve this Question using Set
+
+public class hello {
+
+	public static void main(String[] args) {
+	
+	int arr[]= {10,5,4,8,2,2,4,3,1,2,5};
+	kmin(arr, 3);
+	}
+	
+	public static void kmin(int a[],int target)
+	{
+		Set<Integer> ss= new HashSet<Integer>();
+		for(int i=0;i<a.length;i++)
+		{
+			ss.add(a[i]);
+		}
+		ss.toArray();
+		List<Integer> list = new ArrayList<Integer>(ss);
+		System.out.println(list.get(target-1));
+	}
+	
+	
+
+}
+

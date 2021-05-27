@@ -26,5 +26,32 @@ public class largestsumsubarray {
 
 		System.out.println(max);
 	}
+	
+// 	Another way 
+	int maxSubarraySum(int arr[], int n){
+        
+        // Your code here
+        int max = arr[0];
+        int cur = arr[0];
+        for(int i=1;i<n;i++)
+        {
+            if(cur < 0)
+            {
+                cur = arr[i];
+            }
+                else
+                {
+                    cur += arr[i];
+                }
+            
+            if(cur >= max)
+            {
+                max=cur;
+            }
+            
+        }
+        return max;
+    }
+
 
 }
